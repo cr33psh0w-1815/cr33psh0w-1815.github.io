@@ -4,54 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Cr33psh0ws GitHub Webpage</title>
-    <style>
-        body {
-            font-family: 'Courier New', Courier, monospace;
-            margin: 0;
-            padding: 0;
-            background-color: #000;
-            color: #00FF00; /* Green text */
-        }
-    
-        header {
-            background-color: #000;
-            color: #00FF00;
-            text-align: center;
-            padding: 20px 0;
-        }
-    
-        h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
-    
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #000;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-    
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-    
-        li {
-            margin-bottom: 10px;
-        }
-    
-        a {
-            text-decoration: none;
-            color: #00FF00;
-        }
-    
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -90,10 +44,18 @@
             userContent.innerHTML = DOMPurify.sanitize(userContent.innerHTML);
         });
     </script>
-    <main>
-        <h2>404 - Page Not Found</h2>
-        <p>There is nothing here, the void stares back.</p>
-    </main>
-    
+    <script>
+        // Simulate a 404 error by checking the URL
+        if (window.location.href.includes('404')) {
+            var main = document.querySelector('main');
+            main.style.display = 'none';
+            var errorContent = document.createElement('main');
+            errorContent.innerHTML = '<h2>404 - Page Not Found</h2><p>There is nothing here, the void stares back.</p>';
+            document.body.appendChild(errorContent);
+        }
+    </script>
 </body>
 </html>
+
+
+
