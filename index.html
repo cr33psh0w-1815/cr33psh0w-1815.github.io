@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Cr33psh0ws github webpage </title>
+    <title>Cr33psh0ws GitHub Webpage</title>
     <style>
         body {
-            font-family: 'Times New Roman', Times, serif;
+            font-family: 'Courier New', Courier, monospace;
             margin: 0;
             padding: 0;
-            background-color: black;
-            text-decoration-color: whitesmoke; /* This line sets the color of text decorations (like underlines) */
+            background-color: #000;
+            color: #00FF00; /* Green text */
         }
     
         header {
-            background-color: black;
-            color: whitesmoke;
+            background-color: #000;
+            color: #00FF00;
             text-align: center;
             padding: 20px 0;
         }
@@ -29,11 +29,11 @@
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background-color: black;
+            background-color: #000;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
     
-        ul { /* Corrected selector from 'u1' to 'ul' */
+        ul {
             list-style: none;
             padding: 0;
         }
@@ -44,26 +44,25 @@
     
         a {
             text-decoration: none;
-            color: whitesmoke;
+            color: #00FF00;
         }
     
         a:hover {
             text-decoration: underline;
         }
     </style>
-
 </head>
 <body>
     <header>
-        <h1>something goes here</h1>
-        <p>Blog?Cv??Code snippets?Various projects?</p>
+        <h1>Something Goes Here</h1>
+        <p>Blog? CV? Code Snippets? Various Projects?</p>
     </header>
 
     <main>
-        <h2> about section here maybe? maybe public facing email, whoami?</h2>
-        <p> at some point I will get around to finishing this off...hopefully</p>
+        <h2>About Section Here Maybe? Maybe Public Facing Email, Who Am I?</h2>
+        <p>At some point, I will get around to finishing this off... hopefully</p>
 
-        <h2> posts? </h2>
+        <h2>Posts</h2>
         <ul>
             <li>
                 <a href="blog-post-1.html">Blog Post 1</a>
@@ -71,13 +70,24 @@
             <li>
                 <a href="blog-post-2.html">Blog Post 2</a>
             </li>
-            <!--use as needed, ADD SOMETHING MORE EFFICIENT...idk-->
+            <!-- Use as needed, add something more efficient... idk -->
         </ul>
         
-        <h2> Information section here maybe?</h2>
-        <p> 
-            idk what im going to put here but maybe at some point I will, if you are bored you can donate monero to me @ 8993NE6LhN5FGFN6wTJKLgad8ygM72M6MBNTHPh4Tjuj1FsjApR3u9TKyegtbQ9rLMKNwSD63m1ceLPBQPK747fAF6rhQwc (mainnet)
+        <h2>Information Section Here Maybe?</h2>
+        <p id="user-content"> 
+            I don't know what I'm going to put here, but maybe at some point I will. If you are bored, you can donate Monero to me @ 8993NE6LhN5FGFN6wTJKLgad8ygM72M6MBNTHPh4Tjuj1FsjApR3u9TKyegtbQ9rLMKNwSD63m1ceLPBQPK747fAF6rhQwc (mainnet)
         </p>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.3/dist/purify.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get a reference to the user-generated content element (in this case, the 'user-content' paragraph)
+            var userContent = document.getElementById('user-content');
+            
+            // Use DOMPurify to sanitize and set the content
+            userContent.innerHTML = DOMPurify.sanitize(userContent.innerHTML);
+        });
+    </script>
 </body>
 </html>
