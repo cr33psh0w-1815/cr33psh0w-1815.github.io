@@ -1,62 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="style.js"></script>
     <title>Cr33psh0ws GitHub Webpage</title>
 </head>
 <body>
     <header>
-        <h1>Something Goes Here</h1>
-        <p>Blog? CV? Code Snippets? Various Projects?</p>
+        <h1>Welcome to My Webpage!</h1>
+        <p>This is where I share my blog posts, my CV, and discuss various projects I am working on.</p>
     </header>
 
     <main>
-        <h2>About Section Here Maybe? Maybe Public Facing Email, Who Am I?</h2>
-        <p>At some point, I will get around to finishing this off... hopefully</p>
+        <section>
+            <h2>About me</h2>
+            <p>I am an Australian university student pursuing a Bachelor's degree in ICT. I have a strong interest in open source projects, security,
+               machine learning, hardware 'hacking', DevSecOps, and continually learning more about computer science. If you have any interesting projects
+               or opportunities, feel free to connect with me. </p>
+        </section>
 
-        <h2>Posts</h2>
-        <ul>
-            <li>
-                <a href="blog-post-1.html">Blog Post 1</a>
-            </li>
-            <li>
-                <a href="blog-post-2.html">Blog Post 2</a>
-            </li>
-            <!-- Use as needed, add something more efficient... idk -->
-        </ul>
-        
-        <h2>Information Section Here Maybe?</h2>
-        <p id="user-content"> 
-            I don't know what I'm going to put here, but maybe at some point I will. If you are bored, you can donate Monero to me @ 8993NE6LhN5FGFN6wTJKLgad8ygM72M6MBNTHPh4Tjuj1FsjApR3u9TKyegtbQ9rLMKNwSD63m1ceLPBQPK747fAF6rhQwc (mainnet)
-        </p>
+        <section>
+            <h2>Blog Posts</h2>
+            <ul>
+                <li>
+                    <a href="blog-post-1.html">This space will be updated with blog posts soon.</a>
+                </li>
+                <li>
+                    <a href="blog-post-2.html">Stay tuned for more updates.</a>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Contact Information</h2>
+            <p id="user-content">
+                Email: cr33psh0w@tutanota.de
+                <br>
+                If you appreciate my work and want to support me, you can donate Monero @ 8993NE6LhN5FGFN6wTJKLgad8ygM72M6MBNTHPh4Tjuj1FsjApR3u9TKyegtbQ9rLMKNwSD63m1ceLPBQPK747fAF6rhQwc (Mainnet).
+            </p>
+        </section>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.3/dist/purify.js"></script>
+    <script src="style.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Get a reference to the user-generated content element (in this case, the 'user-content' paragraph)
-            var userContent = document.getElementById('user-content');
-            
-            // Use DOMPurify to sanitize and set the content
-            userContent.innerHTML = DOMPurify.sanitize(userContent.innerHTML);
-        });
-    </script>
-    <script>
-        // Simulate a 404 error by checking the URL
-        if (window.location.href.includes('404')) {
+        // Error handling
+        window.addEventListener('error', function (event) {
             var main = document.querySelector('main');
             main.style.display = 'none';
             var errorContent = document.createElement('main');
-            errorContent.innerHTML = '<h2>404 - Page Not Found</h2><p>There is nothing here, the void stares back.</p>';
+            errorContent.innerHTML = '<h2>Error 404 - Page Not Found</h2><p>We apologize, but the page you\'re looking for isn\'t here.</p>';
             document.body.appendChild(errorContent);
-        }
+        });
     </script>
 </body>
 </html>
-
 
 
