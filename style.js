@@ -2,18 +2,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // Get references to the elements you want to interact with
     const buttons = {
         summary: document.getElementById('summary-button'),
-        whoAmI: document.getElementById('whoami-button'),
         blog: document.getElementById('blog-button'),
-        codeSnippets: document.getElementById('code-snippets-button'),
         contact: document.getElementById('contact-button'),
         pay: document.getElementById('pay-button'),
     };
 
     const sections = {
         summary: document.getElementById('summary-section'),
-        whoAmI: document.getElementById('whoami-section'),
         blog: document.getElementById('blog-section'),
-        codeSnippets: document.getElementById('code-snippets-section'),
         contact: document.getElementById('contact-section'),
         pay: document.getElementById('pay-section'),
     };
@@ -36,8 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
     showSection(sections.summary);
 });
 
-blogButton.addEventListener('click', () => {
-    // Assuming you want to load blog posts from an external source
+// Assuming you want to load blog posts from an external source
+document.getElementById('blog-button').addEventListener('click', () => {
     fetch('blog-posts.json') // Replace 'blog-posts.json' with the actual URL or data source
         .then(response => response.json())
         .then(data => {
@@ -58,14 +54,16 @@ blogButton.addEventListener('click', () => {
         });
 });
 
-payButton.addEventListener('click', () => {
-    // This section can display your payment information or form
-    const paymentInfo = document.getElementById('payment-info');
+// This section can display your payment information or form
+document.getElementById('pay-button').addEventListener('click', () => {
+    // Replace 'YOUR_MONERO_ADDRESS' with your actual Monero address
     const moneroAddress = 'YOUR_MONERO_ADDRESS';
-
+    
+    const paymentInfo = document.getElementById('payment-info');
     paymentInfo.innerHTML = `
         <h2>Support My Work</h2>
         <p>If you appreciate my work and want to support me, you can donate Monero at the following address:</p>
         <p>${8993NE6LhN5FGFN6wTJKLgad8ygM72M6MBNTHPh4Tjuj1FsjApR3u9TKyegtbQ9rLMKNwSD63m1ceLPBQPK747fAF6rhQwc - monero mainnet}</p>
     `;
 });
+
