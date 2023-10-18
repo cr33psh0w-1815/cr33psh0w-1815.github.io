@@ -1,4 +1,3 @@
-// buttons? paragraph up top-summary whoami, blog section button, code snippets button, contact me button, pay me button
 document.addEventListener('DOMContentLoaded', function () {
     // Get references to the elements you want to interact with
     const summaryButton = document.getElementById('summary-button');
@@ -7,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const codeSnippetsButton = document.getElementById('code-snippets-button');
     const contactButton = document.getElementById('contact-button');
     const payButton = document.getElementById('pay-button');
-    
+
     const summarySection = document.getElementById('summary-section');
     const whoAmISection = document.getElementById('whoami-section');
     const blogSection = document.getElementById('blog-section');
@@ -44,21 +43,42 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     blogButton.addEventListener('click', () => {
-        // Add logic to handle the blog section
+        hideSection(summarySection);
+        hideSection(whoAmISection);
+        hideSection(codeSnippetsSection);
+        hideSection(contactSection);
+        hideSection(paySection);
+        showSection(blogSection);
     });
 
     codeSnippetsButton.addEventListener('click', () => {
-        // Add logic to handle the code snippets section
+        hideSection(summarySection);
+        hideSection(whoAmISection);
+        hideSection(blogSection);
+        hideSection(contactSection);
+        hideSection(paySection);
+        showSection(codeSnippetsSection);
     });
 
     contactButton.addEventListener('click', () => {
-        // Add logic to handle the contact section
+        hideSection(summarySection);
+        hideSection(whoAmISection);
+        hideSection(blogSection);
+        hideSection(codeSnippetsSection);
+        hideSection(paySection);
+        showSection(contactSection);
     });
 
     payButton.addEventListener('click', () => {
-        // Add logic to handle the payment section
+        hideSection(summarySection);
+        hideSection(whoAmISection);
+        hideSection(blogSection);
+        hideSection(codeSnippetsSection);
+        hideSection(contactSection);
+        showSection(paySection);
     });
 
     // Initially show the summary section (or any default section you prefer)
     showSection(summarySection);
 });
+
