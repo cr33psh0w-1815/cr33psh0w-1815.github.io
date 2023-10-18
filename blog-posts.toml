@@ -1,0 +1,8 @@
+[blog_posts]
+    [[blog_posts.post]]
+    title = "Example Post 1"
+    link = "https://example.com/post1"
+
+    [[blog_posts.post]]
+    title = "Example Post 2"
+    link = "https://example.com/post2"
