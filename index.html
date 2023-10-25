@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net">
+    
+    <!-- Link to an external stylesheet for consistent styling -->
     <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <!-- Inline CSS for custom styling -->
     <style>
-        /* Add the CSS for centering the slider here */
+        /* Custom CSS for centering the slider */
         #wrap_slider {
-            width: 100%; /* Change the width to 100% to make it responsive */
+            width: 100%; /* Set the width to 100% for responsive design */
             height: 394px;
             padding: 0;
             overflow: hidden;
             display: flex;
-            justify-content: center; /* Center horizontally */
+            justify-content: center; /* Horizontally center content */
         }
 
         #crop {
@@ -23,15 +27,19 @@
             transform-origin: 0 0;
         }
     </style>
+    
+    <!-- Page title -->
     <title>Cr33psh0ws GitHub Webpage</title>
 </head>
 
 <body>
+    <!-- Website header section -->
     <header>
         <h1>Welcome to My Webpage!</h1>
-        <p>This is where I share my blog posts, my CV, and discuss various projects I am working on.</p>
+        <p>This is the place where I share my blog posts, showcase my CV, and engage in discussions about the exciting projects I'm currently working on.</p>
     </header>
 
+    <!-- Slider section for dynamic content -->
     <div id="slider">
         <div class="container clearfix">
             <div class="sixteen columns">
@@ -52,34 +60,39 @@
         </div>
     </div>
 
+    <!-- Main content section of the webpage -->
     <main>
+        <!-- Section about the webpage owner -->
         <section id="summary-section">
             <h2>About me</h2>
-            <p>I am an Australian university student pursuing a Bachelor's degree in ICT. I have a strong interest in open source projects, security, machine learning, hardware 'hacking', DevSecOps, and continually learning more about computer science. If you have any interesting projects or opportunities, feel free to connect with me. </p>
+            <p>I am a dedicated Australian university student pursuing a Bachelor's degree in Information and Communication Technology (ICT). My interests encompass a wide array of topics including open-source projects, cybersecurity, machine learning, hardware hacking, DevSecOps, and the continuous exploration of computer science. If you have any exciting projects or opportunities, please do not hesitate to connect with me.</p>
         </section>
-<!-- Display recent blog posts here and add button to link to all displayed on separate page --> 
+
+        <!-- Section for displaying blog posts (loaded dynamically) -->
         <section id="blog-section">
             <h2>Blog Posts</h2>
             <ul id="blog-list">
-                <!-- Blog posts will be loaded here -->
+                <!-- Blog posts will be loaded here dynamically -->
             </ul>
-<!-- Display recent Github contributions here and add button to link to all displayed on separate page -->
-
         </section>
+
+        <!-- Section for contact information -->
         <section id="contact-section">
             <h2>Contact Information</h2>
             <p id="user-content">
                 Email: cr33psh0w@tutanota.de
                 <br>
-                If you appreciate my work and want to support me, you can donate Monero @ 8993NE6LhN5FGFN6wTJKLgad8ygM72M6MBNTHPh4Tjuj1FsjApR3u9TKyegtbQ9rLMKNwSD63m1ceLPBQPK747fAF6rhQwc (Mainnet).
+                If you appreciate my work and would like to show your support, you can donate Monero at this Mainnet address: 8993NE6LhN5FGFN6wTJKLgad8ygM72M6MBNTHPh4Tjuj1FsjApR3u9TKyegtbQ9rLMKNwSD63m1ceLPBQPK747fAF6rhQwc.
             </p>
         </section>
     </main>
 
+    <!-- Scripts for webpage functionality -->
     <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.3/dist/purify.js"></script>
     <script src="style.js"></script>
+    
+    <!-- JavaScript for error handling -->
     <script>
-        // Error handling
         window.addEventListener('error', function (event) {
             var main = document.querySelector('main');
             main.style.display = 'none';
@@ -90,5 +103,6 @@
     </script>
 </body>
 </html>
+
 
 
